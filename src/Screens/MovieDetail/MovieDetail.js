@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import parse from "html-react-parser";
 import Loader from "../../Components/Loader/Loader";
 import classes from "./MovieDetail.module.css";
+import BookShowModal from "../../Components/BookShowModal/BookShowModal";
 const MovieDetail = () => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -13,6 +14,13 @@ const MovieDetail = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [genre, setGenre] = useState([]);
+  const [openBookShowModal, setBookShowModal] = useState(false);
+  const handleBookShowModalOpen = () => {
+    setBookShowModal(true);
+  };
+  const handleBookShowModalClose = () => {
+    setBookShowModal(false);
+  };
   async function movieDataFetch() {
     setIsLoading(true);
     try {
@@ -41,7 +49,6 @@ const MovieDetail = () => {
       setGenre(movieData[0]?.show?.genres);
     }
   }, [movieData, isLoading]);
-  const bookMovieHandler = () => {};
   return (
     <div className={classes.container}>
       {isLoading ? (
@@ -66,7 +73,10 @@ const MovieDetail = () => {
               {summary ? parse(summary) : ""}
             </div>
             <div className={classes.buttons}>
-              <button className={classes.bookNow} onClick={bookMovieHandler}>
+              <button
+                className={classes.bookNow}
+                onClick={handleBookShowModalOpen}
+              >
                 Book Now
               </button>
               {link && (
@@ -76,6 +86,13 @@ const MovieDetail = () => {
               )}
             </div>
           </div>
+          <BookShowModal
+            open={openBookShowModal}
+            onClose={handleBookShowModalClose}
+            name={name}
+            rating={rating}
+            image={image}
+          />
         </>
       )}
     </div>
