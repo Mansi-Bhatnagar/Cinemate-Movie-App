@@ -3,7 +3,6 @@ import classes from "./MovieCard.module.css";
 const MovieCard = (props) => {
   const { id, name, image, rating } = props;
   const navigate = useNavigate();
-  console.log(id, name, image, rating);
   const clickHandler = () => {
     navigate(`/movie/${id}`);
   };

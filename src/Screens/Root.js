@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
+import { StyledEngineProvider } from "@mui/material/styles";
 const RootLayout = () => {
   return (
     <>
-      <Navbar />
-      <main>
-        <Outlet />
-      </main>
+      <StyledEngineProvider>
+        <Navbar />
+        <main>
+          <Outlet />
+        </main>
+      </StyledEngineProvider>
     </>
   );
 };

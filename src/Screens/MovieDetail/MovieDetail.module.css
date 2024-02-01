@@ -1,0 +1,80 @@
+.container {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.container img {
+  width: 400px;
+  margin-right: 50px;
+  border-radius: 8px;
+  transition: all ease-in-out 0.5s;
+  border: 1px solid transparent;
+  filter: grayscale(0.2);
+}
+.info {
+  margin-left: 50px;
+}
+.info h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.info span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #adb5bd;
+}
+.info h4 {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 10px;
+}
+.summary {
+  color: #adb5bd;
+  width: 400px;
+}
+.container img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
+  border: 1px solid #fff;
+  filter: grayscale(0);
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bookNow {
+  margin-right: 15px;
+}
+.bookNow,
+.watchNow {
+  background-color: #d00000;
+  color: #fff;
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
+  border: 1px solid transparent;
+}
+.watchNow {
+  margin-left: 15px;
+}
+.watchNow a {
+  text-decoration: none;
+  color: #fff;
+}
+.bookNow:hover,
+.watchNow:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.1s;
+  border: 1px solid #fff;
+}
