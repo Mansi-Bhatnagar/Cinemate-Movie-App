@@ -1,0 +1,64 @@
+.container {
+  width: 400px;
+  height: 535px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.container img {
+  width: inherit;
+  height: inherit;
+  border-radius: 8px;
+}
+.info {
+  display: none;
+  text-align: center;
+}
+.container:hover {
+  cursor: pointer;
+}
+.container:hover .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  background-color: #000000bd;
+  width: inherit;
+  height: 100%;
+  border-radius: 8px;
+}
+.info h4 {
+  font-size: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.info h5 {
+  font-size: 25px;
+  color: #ced4da;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.info button {
+  background-color: #d00000;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0px -1px 12px 6px rgba(255, 255, 255, 0.52);
+  -moz-box-shadow: 0px -1px 12px 6px rgba(255, 255, 255, 0.52);
+  box-shadow: 0px -1px 12px 6px rgba(255, 255, 255, 0.52);
+  margin: 5px;
+}
+.info button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 0.5s;
+}

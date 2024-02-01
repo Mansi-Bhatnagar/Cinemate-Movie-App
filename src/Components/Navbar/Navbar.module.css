@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #d00000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar img {
+  height: 40px;
+  padding: 5px;
+}
+.options span {
+  color: #fff;
+  font-weight: 400;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.options span:hover {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all ease-in-out 0.2s;
+}
+@media (max-width: 425px) {
+  .navbar img {
+    width: 180px;
+  }
+  .options span {
+    padding: 15px 10px 15px 10px;
+  }
+}
